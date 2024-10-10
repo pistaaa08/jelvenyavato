@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Display Example</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            margin: 0;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 96px;
+            color: black; /* Change color as needed */
+            text-align: center; /* Center the text in the output */
+            display: flex;
+            align-items: center; /* Center vertically */
+            height: 450px; /* Set height to control vertical space */
+        }
+		.centered {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+	<img src="logó.png" height="220" class="centered">
+    <input type="text" id="myInput" placeholder="Type something...">
+    <button id="myButton">Submit</button>
+    <div id="output"></div>
+	
+	
+    <script>
+        const inputField = document.getElementById('myInput');
+        const outputDiv = document.getElementById('output');
+        const button = document.getElementById('myButton');
+
+        // Object mapping words to outputs
+        const responses = {
+            hello: 'You typed the word: "hello"! Nice to see you!',
+            a1: 'ANGYAL JÁZMIN',
+			a2: 'BAJNÓCZI MIHÁLY BALÁZS',
+			a3: 'BAKOS ROZINA',
+			a4: 'BALÁZS KINGA',
+			a5: 'BALOGH BERTOLD',
+			a6: 'BARTOS LÓRÁND BOTOND',
+			a7: 'CSERZSOVSZKY BARBARA',
+			a8: 'CSERZSOVSZKY LILI JANKA',
+			a9: 'FÜLÖP LILIEN',
+			a10: 'GECSE ANNA KATA',
+			a11: 'GECSE SIMON',
+			a12: 'GODÓ KRISTÓF',
+			a13: 'GÖRÖCS ÁDÁM ISTVÁN',
+			a14: 'HERENCSÉNYI EMMA',
+			a15: 'HLAVATI VIOLA',
+			a16: 'JENEI KITTI',
+			a17: 'JOZILAN ASMA',
+			a18: 'JUSCSÁK LILI',
+			a19: 'KOVÁCS RÉKA VIRÁG',
+			a20: 'LACZKÓ ÁKOS',
+			a21: 'LICSKÓ LORETTA',
+			a22: 'LORKÓ SÁRA EMESE',
+			a23: 'MOLNÁR-TURÁN KRISTÓF',
+			a24: 'ONDOK BALÁZS',
+			a25: 'SÁNDOR BARNA',
+			a26: 'SIMON BÁLINT',
+			a27: 'SZABÓ ENIKŐ STELLA',
+			a28: 'SZEPESSY DÓRA',
+			a29: 'TERNYIK ADÉL',
+			d1: 'ARANYI DOROTI',
+			d2: 'BAKOS ÁKOS ZSOMBOR',
+			d3: 'BARTKÓ BENCE',
+			d4: 'BATU SZEMÍR',
+			d5: 'BULIK KRISZTINA',
+			d6: 'FARKAS LÁSZLÓ',
+			d7: 'FÉNYSZARUSY ANNA',
+			d8: 'GEMBICZKY DORINA',
+			d9: 'GYÖRGY MÁTYÁS',
+			d10: 'HERCZEG NIMRÓD',
+			d11: 'HOLLÓ LÉNÁRD',
+			d12: 'HORVÁTH LIZA',
+			d13: 'HORVÁTH SÁRA',
+			d14: 'IMRE ZOÉ',
+			d15: 'KALMÁR DÁVID',
+			d16: 'KANYÓ VIVIEN',
+			d17: 'KECSKÉS CSENGE',
+			d18: 'KEREKES EMMA',
+			d19: 'KOJNOK ÁBEL',
+			d20: 'KÓSA MIRA ANNA',
+			d21: 'KOVÁCS BENJÁMIN',
+			d22: 'NÁDUDVARI NÁNDOR',
+			d23: 'OTTMÁR GYŐZŐ BOTOND',
+			d24: 'PARÁDI KRISTÓF',
+			d25: 'ROZGONYI VIVIEN',
+			d26: 'SIMON GERGELY',
+			d27: 'SZABÓ MILÁN',
+			d28: 'SZEKERES BERNADETT LILI',
+			d29: 'SZŐLLŐSI ADRIÁNA JÁZMIN',
+			d30: 'TERNYIK KEVE',
+			d31: 'TÓBER ZOÉ',
+			d32: 'TORÁK KINGA NATÁLIA',
+			d33: 'TÓTH LEVENTE',
+			d34: 'TURCSÁNYI ZOÉ',
+			d35: 'VANÓ SZÍRA',
+			d36: 'VÁRI LEVENTE',
+			k1: 'BAGYINSZKI ÁDÁM',
+			k2: 'BODROGI MÁTÉ',
+			k3: 'CZENE ZOLTÁN VIKTOR',
+			k4: 'ÉGER SZILÁRD',
+			k5: 'GOMBOS DOMINIK',
+			k6: 'JUHÁSZ ÁBEL',
+			k7: 'KATONA LEVENTE',
+			k8: 'LEHOCZKI ALMA',
+			k9: 'MARIÁNYI FANNI',
+			k10: 'MOLNÁR FLÓRA KATA',
+			k11: 'NAGY ANNA FRUZSINA',
+			k12: 'NAGY FANNI',
+			k13: 'OLÁH VANDA',
+			k14: 'OLÁH TIFANI MÁRIA',
+			k15: 'OZSVÁRT ENIKŐ',
+			k16: 'PÁDÁR LOTTI',
+			k17: 'PAPP TEODOR',
+			k18: 'PÁSZTOR EZRA',
+			k19: 'ROZGONYI ÁBEL',
+			k20: 'TAJTI DORKA KATINKA',
+			k21: 'TOMASICS KITTI',
+			k22: 'TÓTH NÓRA'
+			
+            // Add more words and responses as needed
+        };
+
+        button.addEventListener('click', function() {
+            const typedValue = inputField.value.toLowerCase(); // Convert to lowercase for case insensitivity
+            outputDiv.textContent = responses[typedValue] || ' '; // Display corresponding message or a default message
+        });
+    </script>
+</body>
+</html>
+
